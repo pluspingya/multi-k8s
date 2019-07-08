@@ -10,7 +10,7 @@ script:
   - docker run -e CI=true pluspingya/react-test npm test
 
 after_success:
-  - docker build -t pluspingya/multi-nginx ./nginx
+  - docker build -t pluspingya/multi-client ./client
   - docker build -t pluspingya/multi-nginx ./nginx
   - docker build -t pluspingya/multi-server ./server
   - docker build -t pluspingya/multi-worker ./worker
